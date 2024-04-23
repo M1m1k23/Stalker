@@ -1,0 +1,61 @@
+@use "sass:math";
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1390;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+@import "fonts";
+@import "base/variables";
+@import "base/mixins";
+@import "base/functions";
+@import "base/icons";
+@import "blocks/reset";
+@import "blocks/common";
+
+
+body {
+    font-family: "Open Sans";
+    color: #fff;
+    background-color: $bgColor;
+    .menu-open & {
+        overflow: hidden;
+        touch-action: none;
+        overscroll-behavior: none;
+    }
+}
+.wrap {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: toEm(400)){
+        padding-bottom: toRem(50);
+    }
+}
+.page {
+    flex: 1 1 auto;
+    // .page__hero
+    &__hero {
+        @include adaptiveValue("margin-bottom", 65, 30);
+    }
+}
+
+[class*="__container"] {
+	max-width: toRem(1420);
+	margin: toRem(0) auto;
+	padding: toRem(0) toRem(15);
+}
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/home/hero";
+
+@import "blocks/media";
+

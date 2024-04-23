@@ -1,0 +1,24 @@
+.button {
+    font-size: toRem(20);
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+    background-color: $btnAndHoverColor;
+    padding: toRem(14) toRem(21);
+    transition: all .3s;
+    @media (any-hover: hover){
+        &:hover{
+            background-color: #A3A19E;
+        }
+    }
+    &--big {
+        @media (any-hover: hover){
+            &:hover{
+                background-color: #63625F;
+            }
+        }
+        &.active  {
+            background-color: $mainColor;
+        }
+    }
+}

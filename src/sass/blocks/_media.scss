@@ -1,0 +1,111 @@
+@media (max-width: toEm(767.98)) {
+    .header {
+        &__menu {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            overflow: auto;
+            background-color: #D4D3CD;
+            padding: toRem(0) toRem(15) toRem(30) toRem(15);
+            @include adaptiveValue("padding-top", 150, 110, 3, 768, 320);
+            transition: left .3s;
+            z-index: 2;
+            &::before {
+                content: "";
+                position: fixed;
+                width: 100%;
+                height: toRem(80);
+                background-color: $mainColor;
+                z-index: 3;
+                top: 0;
+                left: -100%;
+                transition: left .3s;
+            }
+            .menu-open & {
+                left: 0;
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+        &__search {
+            flex-grow: 1;
+        }
+    }
+    .menu {
+        &__list {
+            flex-direction: column;
+            row-gap: toRem(25);
+        }
+        &__link {
+            font-size: toRem(28);
+        }
+    }
+    .icon-menu {
+        display: block;
+        position: relative;
+        width: toRem(30);
+        height: toRem(30);
+        z-index: 5;
+        @media (any-hover: none){
+            &:hover{
+                cursor: default;
+            }
+        }
+        span,
+        &::before,
+        &::after {
+            content: "";
+            transition: all .3s;
+            left: toRem(0);
+            position: absolute;
+            width: toRem(30);
+            height: toRem(2);
+            background-color: #fff;
+        }
+        &::before {
+            top: toRem(5);
+        }
+        &::after {
+            bottom: toRem(5);
+        }
+        span {
+            top: calc(50% - toRem(1));
+        }
+        .menu-open & {
+            span {
+                width: 0;
+            }
+            &::before {
+                top: calc(50% - toRem(1));
+                transform: rotate(-45deg);
+            }
+            &::after {
+                top: calc(50% - toRem(1));
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+@media (max-width: toEm(400)) {
+    .header {
+        &__menu {
+            padding-bottom: toRem(90);
+        }
+        &__action {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: toRem(15);
+            background-color: $mainColor;
+        }
+    }
+    .action-header {
+        &__item {
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $mainColor;
+    z-index: 50;
+    // .header__container
+    &__container {
+        padding: toRem(15) toRem(15);
+        @include adaptiveValue("min-height", 88, 50);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptiveValue("column-gap", 35, 15, 0, $containerWidth, 991.98);
+    }
+    // .header__logo
+    &__logo {
+        position: relative;
+        z-index: 3;
+    }
+    // .header__menu
+    &__menu {
+    }
+    // .header__search
+    &__search {
+        flex-basis: 22.302158%;
+    }
+    // .header__action
+    &__action {
+        position: relative;
+        z-index: 3;
+
+    }
+}
+.menu {
+    flex-grow: 1;
+    // .menu__body
+    &__body {
+    }
+    // .menu__list
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: toRem(10);
+        @include adaptiveValue("column-gap", 15, 10);
+    }
+    // .menu__item
+    &__item {
+    }
+    // .menu__link
+    &__link {
+        position: relative;
+        font-size: toRem(15);
+        font-weight: 600;
+        line-height: 1.1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 0;
+            height: toRem(2);
+            border-radius: toRem(2);
+            margin-top: toRem(2);
+            background-color: $btnAndHoverColor;
+            transition: all .4s;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                color: $btnAndHoverColor;
+                &::before {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+.search-form {
+    position: relative;
+    border-radius: toRem(6);
+    border: toRem(1) solid #D4D3CD;
+    overflow: hidden;
+    z-index: 5;
+    // .search-form__input
+    &__input {
+        padding-right: toRem(36);
+        height: toRem(30);
+        font-size: toRem(15);
+        font-weight: 700;
+        line-height: 1.1;
+        padding-left: toRem(10);
+        border-right: toRem(0) solid $mainColor;
+        &::placeholder {
+            transition: opacity .3s;
+            color: #5D5C5D;
+        }
+        &:focus {
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+    }
+    // .search-form__button
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: toRem(36);
+        height: toRem(30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+        z-index: 3;
+        &::before {
+            font-size: toRem(20);
+        }
+        @media (any-hover: hover){
+            &:hover{
+                color: $btnAndHoverColor;
+            }
+        }
+    }
+}
+
+.action-header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-rows: 1fr;
+    @include adaptiveValue("gap", 20, 10);
+    // .action-header__item
+    &__item {
+        font-size: toRem(20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (any-hover: hover){
+            &:hover{
+                color: $btnAndHoverColor;
+            }
+        }
+    }
+}
+.icon-menu {
+    display: none;
+}
+
