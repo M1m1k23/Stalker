@@ -88,6 +88,11 @@
             }
         }
     }
+    .hero {
+        &__arrwo {
+            display: none
+        }
+    }
 }
 @media (max-width: toEm(400)) {
     .header {
