@@ -45,6 +45,10 @@ body {
     &__hero {
         @include adaptiveValue("margin-bottom", 65, 30);
     }
+    // .page__new
+    &__new {
+        @include adaptiveValue("margin-bottom", 65, 30);
+    }
 }
 
 [class*="__container"] {
@@ -56,6 +60,7 @@ body {
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/home/hero";
+@import "blocks/home/new";
 
 @import "blocks/media";
 

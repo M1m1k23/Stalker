@@ -51,6 +51,7 @@
         transform: translateY(-50%);
         z-index: 5;
         font-size: toRem(44);
+        transition: all .3s;
         @include adaptiveValue("font-size", 44, 24, 0 $maxWidth, 320);
         // .hero__arrwo--prev
         &--prev {
@@ -62,13 +63,15 @@
         }
         @media (any-hover: hover){
             &:hover{
-                opacity: .5;
+                color: $btnAndHoverColor;
             }
         }
     }
 }
+
 .slide-hero {
     position: relative;
+    height: auto;
     &::before {
         content: "";
         position: absolute;

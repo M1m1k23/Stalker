@@ -22,3 +22,17 @@
         }
     }
 }
+.title {
+    color: $mainColor;
+    font-size: 40px;
+    @include adaptiveValue("font-size", 40, 28);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    &--margin {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 20);
+        }
+    }
+}

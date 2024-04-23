@@ -214,7 +214,7 @@ if(newSlider) {
         loop: true,
         autoHeight: true,
         speed: 800,
-        spaceBetween: 30,
+        spaceBetween: 35,
         slidesPerView: 4,
         // Navigation arrows
         navigation: {
@@ -224,22 +224,26 @@ if(newSlider) {
         breakpoints: {
             // when window width is >= 320px
             320: {
-              slidesPerView: 1.5,
+              slidesPerView: 1.4,
               spaceBetween: 15
             },
             480: {
+              slidesPerView: 1.7,
+              spaceBetween: 25
+            },
+            500: {
               slidesPerView: 2,
-              spaceBetween: 20
+              spaceBetween: 25
             },
             // when window width is >= 480px
             650: {
-              slidesPerView: 3,
-              spaceBetween: 25
+              slidesPerView: 2,
+              spaceBetween: 30
             },
             // when window width is >= 640px
             991: {
               slidesPerView: 4,
-              spaceBetween: 38
+              spaceBetween: 35
             }
           }
     });

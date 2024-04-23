@@ -41,6 +41,7 @@
         }
         &__link {
             font-size: toRem(28);
+            color: $mainColor;
         }
     }
     .icon-menu {
@@ -91,6 +92,16 @@
     .hero {
         &__arrwo {
             display: none
+        }
+    }
+}
+@media (max-width: toEm(499.98)){
+    .new {
+        &__slider {
+            margin-right: toRem(-15);
+        }
+        &__arrow {
+            display: none;
         }
     }
 }
