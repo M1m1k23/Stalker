@@ -49,6 +49,14 @@ body {
     &__new {
         @include adaptiveValue("margin-bottom", 65, 30);
     }
+    // .page__category
+    &__category {
+        @include adaptiveValue("margin-bottom", 65, 30);
+    }
+    // .page__delivery
+    &__delivery {
+        @include adaptiveValue("margin-bottom", 65, 30);
+    }
 }
 
 [class*="__container"] {
@@ -61,6 +69,9 @@ body {
 @import "blocks/footer";
 @import "blocks/home/hero";
 @import "blocks/home/new";
+@import "blocks/home/category";
+@import "blocks/home/delivery";
+@import "blocks/home/location";
 
 @import "blocks/media";
 

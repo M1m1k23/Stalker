@@ -1,0 +1,89 @@
+.location {
+    // .location__container
+    &__container {
+        position: relative;
+    }
+    // .location__title
+    &__title {
+    }
+    // .location__body
+    &__body {
+        background-color: #2D2D2F;
+        border-radius: toRem(15);
+        padding: toRem(16) toRem(10);
+        position: absolute;
+        top: toRem(250);
+        left: toRem(15);
+        color: #BDBDB8;
+    }
+    // .location__tel
+    &__tel {
+    }
+    // .location__hours
+    &__hours {
+    }
+    // .location__map
+    &__map {
+        width: 100%;
+        height: toRem(528);
+    }
+}
+
+.tel-location {
+    display: grid;
+    gap: toRem(20);
+    justify-items: center;
+    border-bottom: toRem(1) solid #fff;
+    padding-bottom: toRem(10);
+    // .tel-location__phone
+    &__phone {
+        font-size: toRem(27);
+        color: #fff;
+    }
+    // .tel-location__list
+    &__list {
+        font-size: toRem(18);
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: toRem(1.8);
+    }
+    // .tel-location__item
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: toRem(11);
+        }
+    }
+    // .tel-location__link
+    &__link {
+    }
+}
+
+.hours-location {
+    padding-top: toRem(10);
+    display: grid;
+    gap: toRem(10);
+    justify-items: center;
+    // .hours-location__title
+    &__title {
+        font-size: toRem(16);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: toRem(1.6);
+    }
+    // .hours-location__list
+    &__list {
+        font-size: toRem(15);
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: toRem(1.5);
+    }
+    // .hours-location__item
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: toRem(7);
+        }
+    }
+    // .hours-location__address
+    &__address {
+    }
+}

@@ -52,7 +52,7 @@
         z-index: 5;
         font-size: toRem(44);
         transition: all .3s;
-        @include adaptiveValue("font-size", 44, 24, 0 $maxWidth, 320);
+        @include adaptiveValue("font-size", 44, 24, 0, $maxWidth, 320);
         // .hero__arrwo--prev
         &--prev {
             @include adaptiveValue("left", 32, 10);

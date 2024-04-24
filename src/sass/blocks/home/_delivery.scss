@@ -1,0 +1,48 @@
+.delivery {
+    // .delivery__container
+    &__container {
+    }
+    // .delivery__title
+    &__title {
+    }
+    // .delivery__body
+    &__body {
+        color: #000;
+        @include adaptiveValue("font-size", 24, 20);
+        line-height: 1.2;
+        display: grid;
+        @include adaptiveValue("gap", 30, 15);
+        h4 {
+            font-weight: 600;
+        }
+        p {
+            font-weight: 400;
+        }
+    }
+    // .delivery__pickup
+    &__pickup {
+        display: grid;
+        @include adaptiveValue("gap", 20, 10);
+    }
+    // .delivery__ukr
+    &__ukr {
+        display: grid;
+        @include adaptiveValue("gap", 20, 10);
+        justify-items: start;
+        h4 {
+            text-transform: uppercase;
+        }
+        p {
+            line-height: 1.4;
+        }
+        a {
+            text-transform: uppercase;
+            text-decoration: underline;
+            @media (any-hover: hover){
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
