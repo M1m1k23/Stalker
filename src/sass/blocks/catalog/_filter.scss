@@ -1,0 +1,179 @@
+.filter {
+    border: toRem(1) solid rgba(141, 118, 65, 0.5);
+    // .filter__title
+    &__title {
+    }
+    // .filter__body
+    &__body {
+    }
+    // .filter__section
+    &__section {
+    }
+}
+.title-filter {
+    &.active {
+        .title-filter__button:not(.title-filter__button--main)::before {
+            transform: rotate(-180deg);
+        }
+    }
+    // .title-filter__button
+    &__button {
+        width: 100%;
+        border-bottom: toRem(1) solid rgba(141, 118, 65, 0.5);
+        @include adaptiveValue("padding-top", 30, 15);
+        @include adaptiveValue("padding-bottom", 30, 15);
+        @include adaptiveValue("padding-left", 20, 10);
+        @include adaptiveValue("padding-right", 20, 10);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: toRem(15);
+        color: #242324;
+        font-size: toRem(20);
+        font-weight: 700;
+        line-height: 1.2;
+        transition: all .3s;
+        &::before {
+            font-size: toRem(8);
+            transition: all .3s;
+        }
+        // .title-filter__button--main
+        &--main {
+            &::before {
+                font-size: toRem(16);
+            }
+        }
+        @media (any-hover: hover){
+            &:hover{
+                color: $btnAndHoverColor;
+            }
+        }
+    }
+}
+.section-filter {
+    // .section-filter__body
+    &__body {
+        @include adaptiveValue("padding-top", 30, 15);
+        @include adaptiveValue("padding-bottom", 30, 15);
+        @include adaptiveValue("padding-left", 20, 10);
+        @include adaptiveValue("padding-right", 20, 10);
+        border-bottom: toRem(1) solid rgba(141, 118, 65, 0.5);
+    }
+    // .section-filter__menu
+    &__menu {
+    }
+    // .section-filter__title
+    &__title {
+    }
+    // .section-filter__button
+    &__button {
+    }
+    // .section-filter__price
+    &__price {
+    }
+    // .section-filter__size
+    &__size {
+    }
+}
+.menu-filter {
+    // .menu-filter__list
+    &__list {
+        display: grid;
+        gap: toRem(20);
+    }
+    // .menu-filter__item
+    &__item {
+    }
+    // .menu-filter__link
+    &__link {
+        color: $mainColor;
+        font-size: toRem(15);
+        font-weight: 600;
+        line-height: 1.2;
+        transition: all .3s;
+        @media (any-hover: hover){
+            &:hover{
+                color: $btnAndHoverColor;
+            }
+        }
+        // .menu-filter__link--active
+        &.active {
+            color: $btnAndHoverColor;
+        }
+    }
+}
+
+.price-filter {
+    // .price-filter__range
+    &__range {
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+    }
+    // .price-filter__inputs
+    &__inputs {
+        display: flex;
+        gap: toRem(30);
+    }
+    // .price-filter__input
+    &__input {
+        height: toRem(30);
+        border: toRem(1) solid $btnAndHoverColor;
+        border-radius: toRem(8);
+        text-align: center;
+        color: #000;
+        font-size: toRem(16);
+        font-weight: 600;
+        line-height: 1.1;
+        // .price-filter__input--from
+        &--from {
+        }
+        // .price-filter__input--to
+        &--to {
+        }
+    }
+}
+.size-filter {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: toRem(20);
+    text-align: center;
+    // .size-filter__item
+    &__item {
+        color: $mainColor;
+        font-size: toRem(15);
+        font-weight: 400;
+        line-height: 1.2;
+        cursor: pointer;
+        border-radius: toRem(8);
+        border: toRem(1) solid $btnAndHoverColor;
+        padding: toRem(7);
+        text-transform: uppercase;
+        transition: all .3s;
+        &:has(input:focus-visible) {
+            outline: toRem(2) solid #000;
+            border-radius: toRem(2);
+        }
+        &:has(input:checked) {
+            background-color: $btnAndHoverColor;
+            color: #fff;
+            font-weight: 600;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                background-color: $btnAndHoverColor;
+                color: #fff;
+                font-weight: 600;
+            }
+        }
+    }
+    // .size-filter__input
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+

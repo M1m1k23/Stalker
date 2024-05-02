@@ -57,6 +57,15 @@ body {
     &__delivery {
         @include adaptiveValue("margin-bottom", 65, 30);
     }
+    // .page__location
+    &__location {
+    }
+    // .page__catalog
+    &__catalog {
+    }
+    // .page__product
+    &__product {
+    }
 }
 
 [class*="__container"] {
@@ -72,6 +81,12 @@ body {
 @import "blocks/home/category";
 @import "blocks/home/delivery";
 @import "blocks/home/location";
+@import "blocks/catalog/filter";
+@import "blocks/catalog/catalog";
+@import "blocks/catalog/nouislider";
+@import "blocks/product/product";
+@import "blocks/product/description-product";
+
 
 @import "blocks/media";
 

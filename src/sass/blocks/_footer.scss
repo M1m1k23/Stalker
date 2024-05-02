@@ -13,7 +13,7 @@
     }
     // .footer__body
     &__body {
-        padding-right: toRem(31)
+        padding-right: toRem(31);
     }
     // .footer__title
     &__title {
@@ -29,9 +29,9 @@
     // .footer__logo-big
     &__logo-big {
         img {
+            aspect-ratio: 211 / 111;
             width: 100%;
             height: 100%;
-            aspect-ratio: 211 / 111;
             object-fit: cover;
         }
     }

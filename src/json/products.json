@@ -1,0 +1,19 @@
+{
+    "products":[{
+        "id": 1,
+        "name": "Товар 1",
+        "image_sliderOne": "/img/product/slider/02.jpg",
+        "image_sliderTwo": "/img/product/slider/0122.jpg",
+        "image_sliderThree": "/img/product/slider/02.jpg",
+        "price": "123",
+        "description": "Опис товару 1"
+    },{
+        "id": 2,
+        "name": "Товар 2",
+        "image_sliderOne": "/img/product/slider/0122.jpg",
+        "image_sliderTwo": "/img/product/slider/0122.jpg",
+        "image_sliderThree": "/img/product/slider/0122.jpg",
+        "price": "123",
+        "description": "Опис товару 2"
+    }]
+}

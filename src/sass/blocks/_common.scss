@@ -24,7 +24,6 @@
 }
 .title {
     color: $mainColor;
-    font-size: 40px;
     @include adaptiveValue("font-size", 40, 28);
     font-weight: 700;
     line-height: 1.2;
@@ -34,5 +33,102 @@
         &:not(:last-child) {
             @include adaptiveValue("margin-bottom", 60, 20);
         }
+    }
+}
+
+.item-product {
+    background-color: #FFF;
+    display: grid;
+    gap: toRem(10);
+    padding: toRem(10);
+    // width: toRem(215);
+    min-height: toRem(330);
+    transition: all .3s;
+    @media (any-hover: hover){
+        &:hover{
+            .item-product__img {
+                filter: grayscale(60%);
+            }
+        }
+    }
+    // .item-product__picture-link
+    &__picture-link {
+        display: block;
+    }
+    // .item-product__img
+    &__img {
+        aspect-ratio: 195 / 202;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .4s;
+    }
+    // .item-product__body
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(10);
+        min-width: 0;
+
+    }
+    // .item-product__title
+    &__title {
+        flex-grow: 1;
+        color: $mainColor;
+        font-size: toRem(15);
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    // .item-product__link-title
+    &__link-title {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @media (any-hover: hover){
+            &:hover{
+                color: $btnAndHoverColor;
+            }
+        }
+    }
+    // .item-product__price
+    &__price {
+        color: $mainColor;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+}
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(20);
+    color: #2D2D2F;
+    font-size: toRem(15);
+    font-weight: 600;
+    line-height: 1.2;
+    // .breadcrumbs__item
+    &__item {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: toRem(20);
+        &::before  {
+            font-size: toRem(10);
+        }
+    }
+    // .breadcrumbs__link
+    &__link {
+        transition: all .3s;
+        @media (any-hover: hover){
+            &:hover{
+                color: $btnAndHoverColor;
+                text-decoration: underline;
+            }
+        }
+        
+    }
+    // .breadcrumbs__current
+    &__current {
+        color: $btnAndHoverColor;
     }
 }

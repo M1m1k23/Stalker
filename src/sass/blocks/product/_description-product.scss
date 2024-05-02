@@ -1,0 +1,23 @@
+.description-product {
+    // .description-product__container
+    &__container {
+        display: grid;
+        gap: toRem(18);
+    }
+    // .description-product__title
+    &__title {
+        color: #000;
+        font-size: toRem(20);
+        font-weight: 600;
+        line-height: 1.2;
+        text-transform: uppercase;
+        border-bottom: toRem(1) solid $mainColor;
+    }
+    // .description-product__info
+    &__info {
+        color: $mainColor;
+        font-size: toRem(18);
+        font-weight: 500;
+        line-height: 1.2;
+    }
+}
