@@ -28,13 +28,6 @@ function documentActions(e) {
         }
         slideToggle(currentElement.nextElementSibling)
     }
-    if (targetElement.closest('.rating__input')) {
-      const currentElement = targetElement.closest('.rating__input');
-      const rating = currentElement.closest('.rating');
-      if (rating.classList.contains('..rating--set')) {
-        startRatingGet(rating, currentElement);
-      }
-    }
     if (targetElement.closest('[data-tabs-button]')) {
         const currentElement = targetElement.closest('[data-tabs-button]');
         setTab(currentElement);
@@ -475,7 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
   const productId = parseInt(urlParams.get('id'));
-  fetch('/json/products.json')
+  fetch('json/products.json')
       .then(response => response.json())
       .then(data => {
           const product = data.products.find(item => item.id === productId);
