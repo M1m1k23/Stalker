@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
   const productId = parseInt(urlParams.get('id'));
-  fetch('json/products.json')
+  fetch('dist/json/products.json')
       .then(response => response.json())
       .then(data => {
           const product = data.products.find(item => item.id === productId);
