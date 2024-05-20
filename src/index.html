@@ -43,8 +43,10 @@
                     <button class="search-form__button _icon-search"></button>
                 </form>
                 <div class="header__action action-header">
-                    <a href="#" class="action-header__item _icon-user"></a>
-                    <a href="#" class="action-header__item _icon-cart"></a>
+                    <a href="#" data-popup="#popup" class="action-header__item _icon-user"></a>
+                    <a href="cart.html" class="action-header__item _icon-cart">
+                        <span class="action-header__quantity">0</span>
+                    </a>
                 </div>
                 <button class="icon-menu"><span></span></button>
            </div>
@@ -290,6 +292,74 @@
         </footer>
     </div>
     
+    <div id="popup" aria-hidden="true" class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="1" d="M1.73333 1.48883L21.5469 21.0288" stroke="#242324" stroke-linecap="square" />
+                        <path opacity="1" d="M21.2667 1.48883L1.45309 21.0288" stroke="#242324" stroke-linecap="square" />
+                    </svg>
+                </button>
+                <form action="#" id="login-form" class="form form-login">
+                    <h2 class="form__title">Вхід</h2>
+                    <div class="form__items">
+                        <div class="form__item">
+                            <input type="email" id="login-email" placeholder="E-Mail" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <input type="password" id="login-password" placeholder="Пароль" class="form__input">
+                        </div>
+                    </div>
+                    <a href="#" class="form__new-password">Забули пароль?</a>
+                    <div class="form__action">
+                        <button type="submit" class="form__button button">Увійти</button>
+                        <a href="#" data-popup="#popup-reg" class="form__new-account button button--">Створити акаунт</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="popup-reg" aria-hidden="true" class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="1" d="M1.73333 1.48883L21.5469 21.0288" stroke="#242324" stroke-linecap="square" />
+                        <path opacity="1" d="M21.2667 1.48883L1.45309 21.0288" stroke="#242324" stroke-linecap="square" />
+                    </svg>
+                </button>
+                <form action="#" id="reg-form" class="form form-reg">
+                    <h2 class="form__title">Реєстрація</h2>
+                    <div class="form__items">
+                        <div class="form__item">
+                            <input type="text" name="name" id="reg-name" placeholder="Ім'я" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <input type="email" name="email" id="reg-email" placeholder="E-Mail" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <input type="password" name="password-reg" id="reg-password" placeholder="Пароль" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <input type="password" name="password-returne" id="reg-return-password" placeholder="Повторіть пароль" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <div class="form__checkbox">
+                                <input type="checkbox" id="policy" name="chek-reg" class="form__input form__input--checkbox">
+                                <label for="policy" class="form__label form__label--check">Погоджується з політикою конфіденційності та обробкою персональних даних.</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="form__action">
+                        <button type="submit" class="form__button button">Створити акаунт</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

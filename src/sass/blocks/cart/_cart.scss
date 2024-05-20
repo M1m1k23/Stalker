@@ -1,0 +1,122 @@
+.cart {
+    // .cart__container
+    &__container {
+    }
+    // .cart__breadcrumbs
+    &__breadcrumbs {
+        margin-top: toRem(25);
+        margin-bottom: toRem(25);
+    }
+    // .cart__title
+    &__title {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 46, 20);
+        }
+    }
+    &__wrapper {
+        display: flex;
+        // flex-direction: column-reverse;
+        gap: toRem(30);
+        margin-bottom: toRem(40);
+    }
+    // .cart__list
+    &__list {
+        flex: 1 1 toRem(592);
+        display: grid;
+        gap: toRem(35);
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        gap: toRem(23);
+    }
+    // .cart__image
+    &__image {
+        flex: 0 1 toRem(250);
+        background-color: #FFF;
+        padding: toRem(10);
+        img {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    }
+    // .cart__body
+    &__body {
+        flex: 1 1 auto;
+        color: $mainColor;
+        font-weight: 400;
+        display: grid;
+        align-content: start;
+        gap: toRem(20);
+    }
+    // .cart__name
+    &__name {
+        font-size: toRem(20);
+        line-height: 1.2;
+        font-weight: 600;
+    }
+    // .cart__size
+    &__size {
+        font-size: toRem(16);
+        line-height: 1.1;
+        span {
+            font-weight: 700;
+        }
+    }
+    // .cart__price
+    &__price {
+        font-size: toRem(18);
+        font-weight: 400;
+        line-height: 1.2;
+        span {
+            font-weight: 700;
+        }
+    }
+    // .cart__quantity
+    &__quantity {
+        width: toRem(132);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(28);
+        border-radius: toRem(6);
+        background: #FFF;
+        padding: toRem(10);
+        
+    }
+    // .cart__quantity-btn
+    &__quantity-btn {
+        font-size: toRem(27);
+        font-weight: 700;
+    }
+    // .cart__quantity-value
+    &__quantity-value {
+        font-size: toRem(27);
+        font-weight: 700;
+    }
+    &__total-price {
+        font-size: toRem(17);
+        span {
+            font-weight: 700;
+        }
+    }
+    &__tota-btn {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       gap: toRem(15);
+    }
+    // .cart__total
+    &__total {
+        color: $mainColor;
+        font-size: toRem(24);
+        font-weight: 700;
+        line-height: 1.3;
+    }
+}
+
+.cart {
+		
+}

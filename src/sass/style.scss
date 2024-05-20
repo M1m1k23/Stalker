@@ -29,6 +29,11 @@ body {
         touch-action: none;
         overscroll-behavior: none;
     }
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+        overscroll-behavior: none;
+    }
 }
 .wrap {
     min-height: 100%;
@@ -66,6 +71,12 @@ body {
     // .page__product
     &__product {
     }
+    // .page__account
+    &__account {
+    }
+    // .page__cart
+    &__cart {
+    }
 }
 
 [class*="__container"] {
@@ -76,6 +87,7 @@ body {
 
 @import "blocks/header";
 @import "blocks/footer";
+@import "blocks/popup";
 @import "blocks/home/hero";
 @import "blocks/home/new";
 @import "blocks/home/category";
@@ -86,6 +98,9 @@ body {
 @import "blocks/catalog/nouislider";
 @import "blocks/product/product";
 @import "blocks/product/description-product";
+@import "blocks/account/account";
+@import "blocks/cart/cart";
+
 
 
 @import "blocks/media";

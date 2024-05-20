@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Stalker || Product</title>
+    <title>Stalker || Cart</title>
 </head>
 <body>
     <div class="wrap">
@@ -18,7 +18,7 @@
                     <nav class="menu__body">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Новинки</a>
+                                <a href="catalog.html" class="menu__link">Новинки</a>
                             </li>
                             <li class="menu__item">
                                 <a href="#" class="menu__link">Одяг</a>
@@ -43,8 +43,8 @@
                     <button class="search-form__button _icon-search"></button>
                 </form>
                 <div class="header__action action-header">
-                    <a href="#" class="action-header__item _icon-user"></a>
-                    <a href="cart.html" class="action-header__item _icon-cart">
+                    <a href="#" data-popup="#popup" class="action-header__item  _icon-user"></a>
+                    <a href="cart.html" class="action-header__item action-header__item--active _icon-cart">
                         <span class="action-header__quantity">0</span>
                     </a>
                 </div>
@@ -52,87 +52,29 @@
            </div>
         </header>
         <main class="page">
-            <div class="page__product product">
-                <section class="product__main main-product">
-                    <div class="main-product__container">
-                        <ul class="main-product__breadcrumbs breadcrumbs">
+            <div class="page__cart cart">
+                <section class="cart">
+                    <div class="cart__container">
+                        <ul class="cart__breadcrumbs breadcrumbs">
                             <li class="breadcrumbs__item _icon-ch-right">
                                 <a href="index.html" class="breadcrumbs__link">Головна</a>
                             </li>
-                            <li class="breadcrumbs__item _icon-ch-right">
-                                <a href="catalog.html" class="breadcrumbs__link">Каталог</a>
-                            </li>
                             <li class="breadcrumbs__item">
-                                <span class="breadcrumbs__current">Одяг</span>
+                                <span class="breadcrumbs__current">Кошик</span>
                             </li>
                         </ul>
-                        <div class="main-product__wrap">
-                            <div class="main-product__slider swiper">
-                                <div class="main-product__wrapper swiper-wrapper">
-                                    <div class="main-product__slide swiper-slide">
-                                        <img src="" class="main-product__image main-product__image--one" alt="Image">
-                                    </div>
-                                    <div class="main-product__slide swiper-slide">
-                                        <img src="" class="main-product__image main-product__image--two" alt="Image">
-                                    </div>
-                                    <div class="main-product__slide swiper-slide">
-                                        <img src="" class="main-product__image main-product__image--three" alt="Image">
-                                    </div>
-                                </div>
-                                <div class="main-product__pagination"></div>
-                                <button class="main-product__arrwo main-product__arrwo--prev _icon-ch-left"></button>
-                                <button class="main-product__arrwo main-product__arrwo--next _icon-ch-right"></button>
+                        <h1 class="cart__title title">Кошик</h1>
+                        <div class="cart__wrapper">
+                            <ul class="cart__list">
+                            </ul>
+                            <div class="cart__tota-btn">
+                                <div class="cart__total"></div>
+                                <button class="cart__button button">Замовити</button>
                             </div>
-                            <div class="main-product__body">
-                                <h1 class="main-product__title"></h1>
-                                <div class="main-product__price-stock">
-                                    <div class="main-product__price"></div>
-                                    <ul class="main-product__list">
-                                        <li class="main-product__item">В наявності</li>
-                                    </ul>
-                                </div>
-                                <form class="main-product__sizes sizes-product">
-                                    <h4 class="sizes-product__title">Розмір</h4>
-                                    <div class="sizes-product__items">
-                                        <label class="sizes-product__item">
-                                            <input type="radio" name="size[]" value="S" class="sizes-product__input">
-                                            S
-                                        </label>
-                                        <label class="sizes-product__item">
-                                            <input type="radio" name="size[]" value="M" class="sizes-product__input">
-                                            M
-                                        </label>
-                                        <label class="sizes-product__item">
-                                            <input type="radio" name="size[]" value="L" class="sizes-product__input">
-                                            L
-                                        </label>
-                                        <label class="sizes-product__item">
-                                            <input type="radio" name="size[]" value="XL" class="sizes-product__input">
-                                            XL
-                                        </label>
-                                    </div>
-                                </form>
-                                <div class="main-product__action action-product">
-                                    <button class="action-product__button button">До кошика</button>
-                                    <button class="action-product__button button">купити в один клік</button>
-                                </div>
-                                <div class="main-product__info">
-                                    <p>
-                                        Наявність, розмір та вартість товару, будь ласка, уточнюйте у менеджера
-                                    </p>
-                                </div>
-                            </div>
+                            
                         </div>
-                    </div>
-                </section>
-                <section class="product__description description-product">
-                    <div class="description-product__container">
-                        <h3 class="description-product__title">Опис</h3>
-                        <div class="description-product__info">
-                            <p>
-                                
-                            </p>
-                        </div>
+                        
+                        
                     </div>
                 </section>
             </div>
@@ -193,8 +135,9 @@
             </div>
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    
+    <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

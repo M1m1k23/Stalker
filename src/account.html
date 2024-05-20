@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Stalker || Account</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+           <div class="header__container">
+                <a href="index.html" class="header__logo">
+                    <img src="icons/logo.svg" alt="Logo">
+                </a>
+                <div class="header__menu menu">
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="catalog.html" class="menu__link">Новинки</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Одяг</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Взуття</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Рюкзаки та сумки</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Аксесуари</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Спорядження</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <form action="#" class="header__search search-form">
+                    <input type="text" class="search-form__input" placeholder="Знайти">
+                    <button class="search-form__button _icon-search"></button>
+                </form>
+                <div class="header__action action-header">
+                    <a href="#" data-popup="#popup" class="action-header__item action-header__item--active _icon-user"></a>
+                    <a href="cart.html" class="action-header__item _icon-cart">
+                        <span class="action-header__quantity">0</span>
+                    </a>
+                </div>
+                <button class="icon-menu"><span></span></button>
+           </div>
+        </header>
+        <main class="page">
+            <div class="page__account account">
+                <section class="account">
+                    <div class="account__container">
+                        <ul class="account__breadcrumbs breadcrumbs">
+                            <li class="breadcrumbs__item _icon-ch-right">
+                                <a href="index.html" class="breadcrumbs__link">Головна</a>
+                            </li>
+                            <li class="breadcrumbs__item _icon-ch-right">
+                                <a href="catalog.html" class="breadcrumbs__link">Аккаунт</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <span class="breadcrumbs__current">Мої дані</span>
+                            </li>
+                        </ul>
+                        <div class="account__wrapper">
+                            <aside class="account__navigation navigation-account">
+                                <ul class="navigation-account__list">
+                                    <li class="navigation-account__item">
+                                        <a href="#" class="navigation-account__link navigation-account__link--active">Мої дані</a>
+                                    </li>
+                                    <li class="navigation-account__item">
+                                        <a href="#" class="navigation-account__link">Замовлення</a>
+                                    </li>
+                                    <li class="navigation-account__item">
+                                        <a href="#" class="navigation-account__link">Вихід</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <div class="account__body">
+                                <div class="account__data data">
+                                    <form action="#" id="info-data" class="data__info info-data">
+                                        <h2 class="info-data__title title-form">Мої дані</h2>
+                                        <input type="text" name="fistName" id="infoName" required placeholder="Ім'я" class="info-data__input">
+                                        <input type="text" name="lastName" id="infoLastName" required placeholder="Призвіще" class="info-data__input">
+                                        <input type="text" name="surname" id="infoSurname" required placeholder="По батькові" class="info-data__input">
+                                        <input type="number" name="phone" id="infoPhone" required placeholder="+380" class="info-data__input">
+                                        <input type="email" name="mail" id="infoMail" required placeholder="E-Mail" class="info-data__input">
+                                        <button type="submit" class="info-data__button button">Зберегти</button>
+                                    </form>
+                                    <form action="#" id="delivery-data" method="GET" class="data__delivery delivery-data">
+                                        <div class="delivery-data__header delivery-header">
+                                            <h2 class="delivery-header__title title-form">Адреса доставки</h2>
+                                            <a href="#" class="delivery-header__button button">+Додати адресу</a>
+                                        </div>
+                                        <div class="delivery-data__body">
+                                            <div class="delivery-data__row">
+                                                <h4 class="delivery-data__title">інформація про доставку</h4>
+                                                <div class="delivery-data__items">
+                                                    <label for="delivery-some" class="delivery-data__item">
+                                                        <input type="radio" name="delivery" id="delivery-some" class="delivery-data__input">
+                                                        Самовивіз товару
+                                                    </label>
+                                                    <div class="delivery-data__wrapper">
+                                                        <label for="delivery-courier" class="delivery-data__item">
+                                                            <input type="radio" name="delivery" checked id="delivery-courier" class="delivery-data__input">
+                                                            Кур'єром
+                                                        </label>
+                                                        <span class="delivery-data__info">Доставка здійснюється при замовленні<br> товару на суму понад 1500 грн.</span>
+                                                    </div>
+                                                    <div class="delivery-data__wrapper">
+                                                        <label for="delivery-nova" class="delivery-data__item">
+                                                            <input type="radio" name="delivery" id="delivery-nova" class="delivery-data__input">
+                                                            Нова Пошта
+                                                        </label>
+                                                        <span class="delivery-data__info">Вартість доставки 70 грн</span>
+                                                    </div>
+                                                    <div class="delivery-data__wrapper">
+                                                        <label for="delivery-ukr" class="delivery-data__item">
+                                                            <input type="radio" name="delivery" id="delivery-ukr" class="delivery-data__input">
+                                                            Укр Пошта
+                                                        </label>
+                                                        <span class="delivery-data__info">Вартість доставки 50 грн</span>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="delivery-data__row">
+                                                <h4 class="delivery-data__title">Спосіб оплати</h4>
+                                                <div class="delivery-data__items">
+                                                    <div class="delivery-data__wrapper">
+                                                        <label for="delivery-cash" class="delivery-data__item">
+                                                            <input type="radio" name="pay" id="delivery-cash" checked class="delivery-data__input">
+                                                            Готівкою
+                                                        </label>
+                                                        <span class="delivery-data__info">Оплата готівкою кур'єру</span>
+                                                    </div>
+                                                    <div class="delivery-data__wrapper">
+                                                        <label for="delivery-payment" class="delivery-data__item">
+                                                            <input type="radio" name="pay" id="delivery-payment" class="delivery-data__input">
+                                                            Накладний платіж
+                                                        </label>
+                                                        <span class="delivery-data__info">Оплата здійснюється після отримання товару у відділенні пошти</span>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__body">
+                    <h4 class="footer__title">STALKER-SHOP.BY - Мілітарі магазин</h4>
+                    <a href="#" class="footer__logo-big">
+                        <img src="icons/logo-big.svg" alt="logo-big">
+                    </a>
+                </div>
+                <div class="footer__menu menu-footer">
+                    <div class="menu-footer__block">
+                        <h4 class="menu-footer__title">Категорії</h4>
+                        <ul class="menu-footer__list"> 
+                            <li class="menu-footer__item">
+                                <a href="#" class="menu-footer__link">Новинки</a>
+                            </li>
+                            <li class="menu-footer__item">
+                                <a href="#" class="menu-footer__link">Одяг</a>
+                            </li>
+                            <li class="menu-footer__item">
+                                <a href="#" class="menu-footer__link">Взуття</a>
+                            </li>
+                            <li class="menu-footer__item">
+                                <a href="#" class="menu-footer__link">Рюкзаки та сумки</a>
+                            </li>
+                            <li class="menu-footer__item">
+                                <a href="#" class="menu-footer__link">Аксесуари</a>
+                            </li>
+                            <li class="menu-footer__item">
+                                <a href="#" class="menu-footer__link">Спорядження</a>
+                            </li>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="footer__info info-footer">
+                    <h4 class="info-footer__title">Наши контакти</h4>
+                    <ul class="info-footer__list"> 
+                        <li class="info-footer__item">
+                            Адреса: м. Суми, вул. Харківська 42
+                        </li>
+                        <li class="info-footer__item">
+                            <a href="tel:+380(66)-551-94-05" class="info-footer__link">+380(66)-551-94-05</a>
+                        </li>
+                        <li class="info-footer__item">
+                            <a href="tel:+380(66)-551-94-05" class="info-footer__link">+380(66)-551-93-17</a>
+                        </li>
+                        <li class="info-footer__item">
+                            Email: <a href="mailto:info@stalker-shop.by" class="info-footer__link">info@stalker-shop.by</a>
+                        </li>
+                        <li class="info-footer__item">Час роботи:</li>
+                        <li class="info-footer__item">ПН-ПТ <span>з 09-00 до 18-00</span></li>
+                        <li class="info-footer__item">СБ-НД <span>з 09-00 до 14-00</span></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

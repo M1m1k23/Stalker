@@ -134,6 +134,7 @@
     @include adaptiveValue("gap", 20, 10);
     // .action-header__item
     &__item {
+        position: relative;
         font-size: toRem(20);
         display: flex;
         justify-content: center;
@@ -143,6 +144,22 @@
                 color: $btnAndHoverColor;
             }
         }
+        &--active {
+            color: $btnAndHoverColor;
+        }
+    }
+    &__quantity {
+        position: absolute;
+        top: toRem(-10);
+        left: 50%;
+        background-color: $btnAndHoverColor;
+        border-radius: 50%;
+        font-size: toRem(12);
+        padding: toRem(3) toRem(5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
     }
 }
 .icon-menu {
